@@ -6,17 +6,17 @@
 
 You have been asked to fix a website that has some error in it. You have been given access to the files on the server.
 
-1. The folder should only be accessible by the vagrantuser. 
+1. The folder should only be accessible by the vagrantuser.
 
 2. Other users should not be able to enter the directory.
-3. The files in the assets folder have the wrong file extension. 
+3. The files in the assets folder have the wrong file extension.
 4. Figure out which one is correct.
 5. Search the manual for a command that will help you to rename multiple files at once.
-6. The four files called puppy are an old format and need to be deleted. 
+6. The four files called puppy are an old format and need to be deleted.
 7. Try to delete them with a single command.
-8. He says there was a file called index.html that he tried to rename but it disappeared. 
+8. He says there was a file called index.html that he tried to rename but it disappeared.
 9. Try to find it and fix it.
-10. The files are going to be a public. 
+10. The files are going to be a public.
 11. The owner needs full permissions but group only need to be able read to the files
 
 **Steps**
@@ -39,7 +39,7 @@ You have been asked to fix a website that has some error in it. You have been gi
 -----
 
 #### Tech Used :
-**Virtual Box, Vagrant**
+**Virtual Box, Vagrant, Bash**
 
 -----
 ##### how to download :
@@ -65,9 +65,9 @@ If you don't have Vagrant installed, follow this link: [**Download Vagrant**](ht
 ~~~
 
 Vagrant.configure("2") do |config|
-  
+
   config.vm.box = "ubuntu/xenial64"
-  
+
 end
 ~~~
 
@@ -75,14 +75,14 @@ end
 8. Once that is done, in your terminal enter the command **'vagrant ssh'** to enter the virtual machine.
 9. Still in your terminal enter the command **'sudo vagrant apt-get update && apt-get upgrade'** this will check for any updates that may have been uploaded after the version was posted and immediately upgrade.
 10. Following that we will install nginx **'sudo vagrant apt-get install nginx -y'**
-11. Then enter **'curl http://localhost'** to check if nginx has been installed. You should see the html of the site appear. 
+11. Then enter **'curl http://localhost'** to check if nginx has been installed. You should see the html of the site appear.
 12. Enter the command **'ifconfig'** to get the current address of your virtual machine (inet addr).
 13. Go back to the vagrant file in your text editor and inside the Vagrant.configure("2") you can add a network like so :
-  
+
 
 ~~~
 Vagrant.configure("2") do |config|
-  
+
   config.vm.box = "ubuntu/xenial64"
 
   config.vm.network "private_network", ip:"192.168.12.120"
@@ -111,7 +111,3 @@ All in all I think today was very interesting. I really liked the challenge the 
 overall I give it a 7.5/10
 
 -----
-
-
-
-
